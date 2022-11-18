@@ -1,0 +1,54 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  border: 1px solid;
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.container .circle {
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.container .circle:before,
+.container .circle:after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 251, 4, 0.685);
+  opacity: 0;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: -2;
+  transition: all 0.3s;
+}
+.container .circle:before {
+  width: 100%;
+  height: 1000%;
+  transform: translateY(-50%);
+}
+.container .circle:after {
+  width: 1000%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.container .circle:hover {
+  background: #fdca00;
+}
+.container .circle:hover:before,
+.container .circle:hover:after {
+  display: block;
+  opacity: 1;
+}
+.container .circle:hover div {
+  background: black;
+}
+.container .circle > div {
+  background-color: #3737ff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 9px;
+}

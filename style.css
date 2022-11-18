@@ -7,13 +7,13 @@
   overflow: hidden;
   margin: 0 auto;
 }
-.container .circle {
+.circle {
   border: 1px solid;
   position: relative;
   cursor: pointer;
 }
-.container .circle:before,
-.container .circle:after {
+.circle:before,
+.circle:after {
   content: "";
   position: absolute;
   background: rgba(255, 251, 4, 0.685);
@@ -24,28 +24,28 @@
   z-index: -2;
   transition: all 0.3s;
 }
-.container .circle:before {
+.circle:before {
   width: 100%;
   height: 1000%;
   transform: translateY(-50%);
 }
-.container .circle:after {
+.circle:after {
   width: 1000%;
   height: 100%;
   transform: translateX(-50%);
 }
-.container .circle:hover {
+.circle:hover {
   background: #fdca00;
 }
-.container .circle:hover:before,
-.container .circle:hover:after {
+.circle:hover:before,
+.circle:hover:after {
   display: block;
   opacity: 1;
 }
-.container .circle:hover div {
+.circle:hover div {
   background: black;
 }
-.container .circle > div {
+.circle > div {
   background-color: #3737ff;
   border-radius: 50%;
   width: 80px;
